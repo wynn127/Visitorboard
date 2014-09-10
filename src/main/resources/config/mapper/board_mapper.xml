@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardMapper">
+	<resultMap type="com.rookie.visitorboard.vo.BoardVo" id="boardVo">
+		<result property="boardId" column="board_id"/>
+		<result property="email" column="email"/>
+		<result property="password" column="password"/>
+		<result property="content" column="content"/>
+		<result property="registeredDate" column="registered_date"/>
+		<result property="updatedDate" column="updated_date"/>
+	</resultMap>
+	
+	<select id="getBoardList" resultMap="boardVo">
+		SELECT
+			*
+		FROM
+			board
+	</select>
+<!-- 	
+	<select id="getTotalNumberOfAllLecture" parameterType="int" resultType="int">
+		SELECT
+			count(*)
+		FROM
+			mapping_lecture
+	</select>
+	
+	<select id="getTotalNumberOfDBTable" parameterType="int" resultType="int">
+		SELECT
+			count(*)
+		FROM
+			mapping_lecture
+		WHERE
+			mapped_db = #{mappedDB}
+	</select>
+	
+	<insert id="add" parameterType="com.nhnent.ndorphin.vo.LocationVo">
+		INSERT INTO
+			mapping_lecture(
+			mapped_db)
+		VALUES
+			(#{mappedDB})
+		<selectKey resultType="int" order="AFTER" keyProperty="keyValue">
+        SELECT LAST_INSERT_ID() as keyValue
+    </selectKey>
+	</insert>
+	
+	<update id="updateMappedDB" parameterType="com.nhnent.ndorphin.vo.LocationVo">
+		UPDATE
+			mapping_lecture
+		SET
+			mapped_db = #{mappedDB}
+		WHERE
+			lecture_id = #{keyValue}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		DELETE
+		FROM
+			mapping_lecture
+		WHERE
+			lecture_id = #{keyValue}
+	</delete>
+ -->
+</mapper>
