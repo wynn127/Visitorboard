@@ -31,16 +31,6 @@ public class BoardDaoTest {
 	@Resource
 	BoardDao boardDao;
 	
-	private MockMvc mockMvc;
-	
-	@Before
-	public void createTestResource() {
-		mockMvc = MockMvcBuilders.xmlConfigSetup(new String[] {
-				"classpath*:config/context/*.xml",
-				"classpath*:config/mapper/*.xml",
-				"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml"}).build();
-	}
-	
 	@Test
 	public void connectionDB(){
 		List<BoardVo> result = boardDao.getBoardList();
