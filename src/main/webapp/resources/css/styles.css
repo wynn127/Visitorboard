@@ -1,0 +1,12 @@
+.container_board {
+	 margin-left:10%;
+	 margin-right:10%;
+}
+.table th {
+	text-align:center;
+}
+thead {
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
