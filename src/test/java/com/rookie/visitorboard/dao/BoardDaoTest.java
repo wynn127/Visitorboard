@@ -45,5 +45,6 @@ public class BoardDaoTest {
 	public void connectionDB(){
 		List<BoardVo> result = boardDao.getBoardList();
 		Assert.assertNotNull(result);
+		Assert.assertEquals(1, result.get(0).getBoardId());
 	}
 }
