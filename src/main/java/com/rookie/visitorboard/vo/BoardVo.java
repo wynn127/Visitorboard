@@ -6,7 +6,7 @@ public class BoardVo {
 	private String password;
 	private String content;
 	private String registeredDate;
-	private String updateDate;
+	private String updatedDate;
 	
 	public int getBoardId() {
 		return boardId;
@@ -38,10 +38,10 @@ public class BoardVo {
 	public void setRegisteredDate(String registeredDate) {
 		this.registeredDate = registeredDate;
 	}
-	public String getUpdateDate() {
-		return updateDate;
+	public String getUpdatedDate() {
+		return updatedDate;
 	}
-	public void setUpdateDate(String updateDate) {
-		this.updateDate = updateDate;
+	public void setUpdateDate(String updatedDate) {
+		this.updatedDate = updatedDate;
 	}
 }

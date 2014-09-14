@@ -30,12 +30,14 @@
 			</tr>
 		</thead>
 		<tbody>
+		<c:forEach var="boardItem" items="${boardList}">
 			<tr>
-				<th>aa</th>
-				<th>bb</th>
-				<th>cc</th>
-				<th>dd</th>
+				<th>${boardItem.email }</th>
+				<th>${boardItem.content }</th>
+				<th>${boardItem.registeredDate }</th>
+				<th>${boardItem.updatedDate }</th>
 			</tr>
+		</c:forEach>
 		</tbody>
 	</table>
 	</div>
